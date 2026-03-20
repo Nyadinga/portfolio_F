@@ -1,0 +1,100 @@
+/* Layout Positioning */
+.about-me .container {
+  padding: 50px 0;
+}
+
+/* The Square Profile Card */
+.square-card {
+  background: #141414; /* Slightly lighter than the background */
+  padding: 20px;
+  padding-left: 15px;
+  padding-right: 3px;
+  border-radius: 10px; /* The soft rounded corners from your reference */
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(207, 201, 201, 0.3);
+}
+
+.square-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.social-handle {
+  color: white;
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* Text and Grid Styling */
+.about-content-side {
+  max-width: 600px;
+}
+
+.about-text p {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* Info Boxes Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.info-box {
+  border: 1px solid var(--primary-red);
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 140px;
+  box-shadow: 0 5px 15px rgba(255, 26, 26, 0.3);
+}
+
+.red-title {
+  color: var(--primary-red);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.info-box p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Responsive: Stacks on Mobile */
+@media (max-width: 992px) {
+  .about-me .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+.about-initial {
+  font-family: "GNAR", serif;
+  font-size: 2.5rem; /* Better for "xx-large" impact */
+  color: var(--text-main);
+  display: flex; /* Required for alignment to work */
+  justify-content: flex-start; /* Keeps it left-aligned with the bio on desktop */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Mobile Fix: Center it when everything else centers */
+@media (max-width: 992px) {
+  .about-initial {
+    justify-content: center;
+  }
+}

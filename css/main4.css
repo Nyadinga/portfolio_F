@@ -1,0 +1,143 @@
+/* Contact Section Styles */
+.contact-section {
+  background-color: var(--bg-dark);
+}
+
+.contact-card {
+  background: #000;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 26, 26, 0.3); /* Subtle red border */
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.1); /* Subtle red outer glow */
+}
+
+/* Custom Input Styling */
+.form-control-custom {
+  background: #0a0a0a !important;
+  border: 1px solid #333 !important;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.form-control-custom:focus {
+  border-color: var(--primary-red) !important;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 26, 26, 0.4);
+}
+
+/* Red Button */
+.btn-send {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 50px; /* Fully rounded like your screenshot */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+  background-color: var(--hover-red);
+  transform: scale(1.05);
+}
+
+/* Circular Social Icons */
+.social-circle {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-circle.active,
+.social-circle:hover {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+}
+.skill-card {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 25px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--primary-red);
+  box-shadow: 0 0 15px rgba(255, 26, 26, 0.15);
+  transform: translateY(-5px);
+}
+
+.skill-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skill-icon-header i {
+  font-size: 2rem;
+}
+
+.skill-icon-header h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: #141414;
+  color: var(--text-muted);
+  border: 1px solid #333;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.skill-tag:hover {
+  border-color: var(--primary-red);
+  color: white;
+}
+.section-title-wrapper {
+  width: 100%;
+  display: block;
+  margin-bottom: 60px; /* Space between title and your bio */
+}
+
+.section-title {
+  font-family: "GNAR", sans-serif;
+  font-size: 3rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 8px; /* Gives that spaced out "A B O U T" look */
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* Optional: Small red line under the title like the reference image */
+.title-underline {
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-red);
+  margin: 10px auto 0; /* Centers the line */
+}
+.btn {
+  letter-spacing: 2px;
+}

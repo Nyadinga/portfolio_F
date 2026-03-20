@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Gnar';
+    src: url('Gnar-ExtraBold.eot');
+    src: local('Gnar ExtraBold'), local('Gnar-ExtraBold'),
+        url('Gnar-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Gnar-ExtraBold.woff2') format('woff2'),
+        url('Gnar-ExtraBold.woff') format('woff'),
+        url('Gnar-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
