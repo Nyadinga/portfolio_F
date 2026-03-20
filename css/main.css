@@ -348,6 +348,8 @@ body {
 
 /* --- FIX: FOOTER ROW ON MOBILE --- */
 .social-footer .container {
+  max-width: 100%; /* Keep it inside the screen */
+  overflow: hidden;
   display: flex !important;
   flex-direction: row !important; /* Forced row */
   justify-content: center !important;
@@ -356,7 +358,7 @@ body {
 }
 
 /* Ensure the footer doesn't take up too much vertical space on phones */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .social-footer {
     padding: 20px 0;
     margin-top: 20px;
@@ -364,5 +366,6 @@ body {
 
   .footer-icon-link {
     font-size: 1.8rem !important; /* Balanced size for mobile */
+    padding: 5px;
   }
 }
