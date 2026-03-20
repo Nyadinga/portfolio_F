@@ -213,3 +213,17 @@
   border: 1px solid #333333;
   color: #333333;
 }
+/* Make the hamburger icon black in Light Mode */
+[data-bs-theme="light"] .navbar-toggler-icon {
+  filter: invert(1); /* This flips white to black perfectly */
+}
+
+/* Optional: Add a subtle border to the button in Light Mode */
+[data-bs-theme="light"] .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* If the button glows white on hover, fix it here */
+[data-bs-theme="light"] .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 26, 26, 0.25); /* Red glow instead of white */
+}
