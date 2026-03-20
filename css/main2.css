@@ -5,13 +5,16 @@
 
 /* The Square Profile Card */
 .square-card {
-  background: #141414; /* Slightly lighter than the background */
+  background: var(--bg-card); /* Slightly lighter than the background */
   padding: 20px;
   padding-left: 15px;
   padding-right: 3px;
   border-radius: 10px; /* The soft rounded corners from your reference */
   display: inline-block;
   box-shadow: 0 5px 15px rgba(207, 201, 201, 0.3);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .square-img {

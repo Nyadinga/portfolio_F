@@ -97,10 +97,10 @@
 
 .social-footer .container {
   display: flex !important;
-  flex-direction: row !important; /* Forces row even on mobile */
+  flex-direction: row !important;
   justify-content: center !important;
-  flex-wrap: nowrap; /* Prevents icons from jumping to a new line */
-  gap: 20px !important; /* Adjusted gap for mobile fingers */
+  flex-wrap: nowrap;
+  gap: 20px !important;
 }
 
 .footer-icon-link {
@@ -112,4 +112,58 @@
 
 .footer-icon-link:hover {
   color: var(--primary-red);
+}
+/* Light Mode Styles */
+[data-bs-theme="light"] {
+  --bg-dark: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+}
+
+/* Fix for your dark cards in light mode */
+[data-bs-theme="light"] .project-card,
+[data-bs-theme="light"] .skill-card,
+[data-bs-theme="light"] .contact-card {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Keep the red highlights visible on light background */
+[data-bs-theme="light"] .section-title,
+[data-bs-theme="light"] .about-text h2 {
+  color: #000000;
+}
+[data-bs-theme="light"] .square-card {
+  background: var(--bg-card) !important; /* Forces white background */
+  box-shadow: 0 10px 30px rgba(255, 26, 26, 0.4) !important; /* Stronger red shadow */
+}
+[data-bs-theme="light"] .btn-primary {
+  background-color: var(--primary-red) !important;
+  border-color: var(--primary-red) !important;
+  color: #ffffff !important; /* Keep text white so it’s readable on red */
+}
+
+/* Optional: Hover state for Light Mode */
+[data-bs-theme="light"] .btn-primary:hover {
+  background-color: var(--hover-red) !important;
+  border-color: var(--hover-red) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 26, 26, 0.4);
+}
+[data-bs-theme="light"] .footer-icon-link {
+  color: var(--text-main) !important; /* Darker icons for light mode */
+}
+[data-bs-theme="light"] .footer-icon-link:hover {
+  color: var(--primary-red) !important;
+}
+[data-bs-theme="light"] .section-title {
+  color: var(--text-main) !important; /* Darker section titles */
+}
+[data-bs-theme="light"] .skill-card h3 {
+  color: var(--text-muted) !important; /* Darker skill card titles */
+}
+[data-bs-theme="light"] .project-card h3 {
+  color: var(--text-main) !important;
 }

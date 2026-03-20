@@ -13,9 +13,9 @@
 
 /* Custom Input Styling */
 .form-control-custom {
-  background: #0a0a0a !important;
+  background: var(--bg-dark) !important;
   border: 1px solid #333 !important;
-  color: white !important;
+  color: var(--text-muted) !important;
   padding: 12px 20px;
   border-radius: 10px;
   width: 100%;
@@ -140,4 +140,76 @@
 }
 .btn {
   letter-spacing: 2px;
+}
+/* Target the card inside your col-md-4 */
+.col-md-4 .skill-card,
+.col-md-4 .project-card {
+  transition: all 0.3s ease; /* Makes the glow fade in smoothly */
+  border: 1px solid transparent; /* Prevents jumping when border appears */
+}
+
+/* The Red Hover Effect */
+.col-md-4:hover .skill-card,
+.col-md-4:hover .project-card {
+  border-color: var(--primary-red) !important;
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.4); /* Red Glow */
+  transform: translateY(-8px); /* Subtle lift effect */
+}
+/* General styling for the contact text using variables */
+.contact-description,
+.contact-text {
+  color: var(--text-main);
+}
+
+/* Adjust the social circles for Light Mode */
+[data-bs-theme="light"] .social-circle {
+  border-color: #dee2e6; /* Light gray border instead of dark */
+  color: #333; /* Dark icons */
+  background: #ffffff;
+}
+
+[data-bs-theme="light"] .social-circle:hover,
+[data-bs-theme="light"] .social-circle.active {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+  color: #ffffff; /* Icon turns white on red background */
+}
+[data-bs-theme="light"] .form-control-custom {
+  background: #ffffff !important; /* Pure white for input areas */
+  color: #000000 !important; /* Black text for typing */
+  border: 1px solid #dee2e6 !important; /* Soft gray border */
+}
+[data-bs-theme="light"] .form-control-custom:focus {
+  border-color: var(--primary-red) !important;
+  box-shadow: 0 0 8px rgba(255, 26, 26, 0.2);
+}
+
+/* Adjust Placeholder color for Light Mode */
+[data-bs-theme="light"] .form-control-custom::placeholder {
+  color: #6c757d; /* Muted gray so it's readable but not too bold */
+}
+/* Base style for the project button */
+.btn-project-outline {
+  border: 1px solid var(--text-main); /* Uses white in dark, black in light */
+  color: var(--text-main);
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover effect remains Red for both modes */
+.btn-project-outline:hover {
+  background: var(--primary-red);
+  border-color: var(--primary-red);
+  color: #ffffff !important; /* Always white text on red background */
+  transform: translateY(-2px);
+}
+
+/* Light Mode specific adjustment for visibility */
+[data-bs-theme="light"] .btn-project-outline {
+  border: 1px solid #333333;
+  color: #333333;
 }

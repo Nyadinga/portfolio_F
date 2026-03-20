@@ -17,6 +17,12 @@
   --font-medium: 500;
   --font-light: 300;
 }
+[data-bs-theme="light"] {
+  --bg-dark: #ffffff;
+  --bg-card: #f8f9fa;
+  --text-main: #1a1a1a; /* This turns the text DARK in Light Mode */
+  --text-muted: #4a4a4a;
+}
 @font-face {
   font-family: "GNAR";
   src:
