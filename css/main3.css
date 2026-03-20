@@ -94,3 +94,22 @@
   text-decoration: none;
   font-size: 0.85rem;
 }
+
+.social-footer .container {
+  display: flex !important;
+  flex-direction: row !important; /* Forces row even on mobile */
+  justify-content: center !important;
+  flex-wrap: nowrap; /* Prevents icons from jumping to a new line */
+  gap: 20px !important; /* Adjusted gap for mobile fingers */
+}
+
+.footer-icon-link {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+  padding: 10px; /* Larger hit area for thumbs */
+}
+
+.footer-icon-link:hover {
+  color: var(--primary-red);
+}

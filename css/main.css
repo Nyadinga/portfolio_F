@@ -329,3 +329,40 @@ body {
   aspect-ratio: 1 / 1; /* Forces it to always stay a perfect square */
   object-fit: cover; /* Keeps the person/object in the photo proportional */
 }
+/* --- FIX: REMOVE INNER SCROLLBARS --- */
+.about-image-wrapper,
+.orbit,
+.about-me .container {
+  overflow: visible !important; /* Forces the main page to handle all scrolling */
+  touch-action: auto; /* Ensures mobile swiping works normally */
+}
+
+/* --- FIX: ORBIT INTERFERENCE --- */
+.orbit {
+  pointer-events: none; /* Mouse/Finger "passes through" icons to the page underneath */
+}
+
+.orbit-item {
+  pointer-events: auto; /* Re-enables clicking on the actual icons if needed */
+}
+
+/* --- FIX: FOOTER ROW ON MOBILE --- */
+.social-footer .container {
+  display: flex !important;
+  flex-direction: row !important; /* Forced row */
+  justify-content: center !important;
+  flex-wrap: nowrap !important; /* Prevents stacking on tiny screens */
+  gap: 25px !important; /* Space between icons */
+}
+
+/* Ensure the footer doesn't take up too much vertical space on phones */
+@media (max-width: 768px) {
+  .social-footer {
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+
+  .footer-icon-link {
+    font-size: 1.8rem !important; /* Balanced size for mobile */
+  }
+}
