@@ -167,3 +167,21 @@
 [data-bs-theme="light"] .project-card h3 {
   color: var(--text-main) !important;
 }
+/* Error message text */
+.error-msg {
+  color: red !important;
+  font-size: 0.9rem !important;
+  margin-top: 5px !important;
+  display: block !important;
+  font-weight: bold !important;
+}
+
+/* Optional: add fade-in effect when showing error */
+.error-msg.show {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.error-msg.hide {
+  opacity: 0;
+}

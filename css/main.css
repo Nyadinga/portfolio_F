@@ -375,3 +375,8 @@ body {
     padding: 5px;
   }
 }
+.nav-link.active {
+  color: var(--primary-red) !important;
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-red);
+}
