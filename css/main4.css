@@ -227,3 +227,14 @@
 [data-bs-theme="light"] .navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 26, 26, 0.25); /* Red glow instead of white */
 }
+.popup-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4bb543; /* green */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  z-index: 9999;
+  display: none; /* hidden by default */
+}

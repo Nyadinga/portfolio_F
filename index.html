@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
+    <div id="popupMessage" class="popup-message" style="display:none;"></div>
     <nav
       class="navbar-me text-uppercase navbar navbar-expand-md navbar-light w-100 bg-primary sticky-top"
     >
@@ -302,7 +303,7 @@
 
       <div class="col-md-7">
         <div class="contact-card">
-          <form action="/contact" method="POST" id="formContact">
+          <form id="formContact">
             <div class="mb-4">
               <input type="text" class="form-control-custom" id="name" name="name" placeholder="Your Name" required>
               <span class="error-msg" id="nameError"></span>
@@ -324,6 +325,6 @@
   </div>
 </section>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
