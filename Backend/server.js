@@ -28,14 +28,16 @@ app.use(
   }),
 );
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // SQLite
 const db = new sqlite3.Database("portfolio.db", (err) => {
   if (err) console.error("DB Connection Error:", err);
   else console.log("Connected to portfolio.db");
 });
-
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 // -------------------- AUTH --------------------
 let isLoggedIn = false;
 
@@ -66,7 +68,7 @@ app.post("/login", (req, res) => {
   const { username, password } = req.body;
   if (username === "admin" && password === "ntec2026") {
     req.session.user = { username };
-    return res.redirect("/dashboard");
+    return res.sendFile(path.join(__dirname, "public", "dashboard.html"));
   }
   res.send("Invalid credentials");
 });
